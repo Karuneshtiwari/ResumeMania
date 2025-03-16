@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumemania</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>ResumeMania</h1>
+        <input type="text" id="name" placeholder="Enter your name">
+        <input type="email" id="email" placeholder="Enter your email">
+
+        <input type="file" id="photo" onchange="previewPhoto(event)">
+        <img id="photo-preview" class="profile-pic" style="display:none;">
+
+        <div id="education-container">
+            <h3>Education</h3>
+            <textarea class="education" placeholder="Enter your education details"></textarea>
+            <button onclick="addEducation()">+ Add More Education</button>
+        </div>
+
+        <div id="work-container">
+            <h3>Work Experience</h3>
+            <textarea class="work" placeholder="Enter your work experience"></textarea>
+            <button onclick="addWork()">+ Add More Work Experience</button>
+        </div> <br><br>
+
+        <button onclick="generateResume()">Generate Resume</button>
+
+        <div id="resume-preview"></div>
+        <button id="download-pdf" onclick="downloadResumePDF()" style="display:none;">Download PDF</button>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>About | Privacy Policy | Terms & Conditions | Contact Us</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/karunesh-kumar-tiwari-72474a330" class="social-icon">Linkedin</a>
+                <a href="https://www.facebook.com/karuneshkumar.tiwari.1" class="social-icon">FB</a>
+                <a href="#" class="social-icon">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
